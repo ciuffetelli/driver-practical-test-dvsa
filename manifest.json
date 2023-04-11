@@ -1,0 +1,22 @@
+{
+    "name" : "UK - Drive Practical Test Book Helper",
+    "version" : "1.0",
+    "description" : "This extension helps you to book a Drive Practical Test.",
+    "author" : "Danel Ciuffetelli <seufetelli@gmail.com>",
+    "permissions": ["storage"],
+    "host_permissions": [
+        "https://*.driverpracticaltest.dvsa.gov.uk/*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "https://*.driverpracticaltest.dvsa.gov.uk/*"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "manifest_version": 3
+}
